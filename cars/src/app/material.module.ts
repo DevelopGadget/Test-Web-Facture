@@ -4,16 +4,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatListModule } from '@angular/material/list';
-import { MatBadgeModule } from '@angular/material/badge';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -23,11 +21,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule,
+    MatCardModule,
     MatSnackBarModule,
-    MatListModule,
     MatProgressSpinnerModule,
-    MatBadgeModule,
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,
@@ -40,11 +36,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule,
+    MatCardModule,
     MatSnackBarModule,
-    MatListModule,
     MatProgressSpinnerModule,
-    MatBadgeModule,
     MatTableModule,
     MatPaginatorModule,
     MatTooltipModule,

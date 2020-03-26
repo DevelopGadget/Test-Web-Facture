@@ -1,0 +1,9 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-between space-evenly">
+    <mat-card class="example-card" fxFlex.xs="100" fxFlex="30" *ngFor="let item of this.dataSource" style="margin-bottom: 10px;">
+        <mat-card-header>
+            <mat-card-title>{{item.name.toUpperCase()}}</mat-card-title>
+            <mat-card-subtitle>{{item.brand.toUpperCase()}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.url" alt="Photo of a Shiba Inu">
+    </mat-card>
+</div>

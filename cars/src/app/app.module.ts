@@ -9,10 +9,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoadingModule } from './components/loading/loading.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CarformModule } from './components/carform/carform.module';
+import { TableCarComponent } from './components/table-car/table-car.component';
+import { CardCarComponent } from './components/card-car/card-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TableCarComponent,
+    CardCarComponent
   ],
   imports: [
     BrowserModule,

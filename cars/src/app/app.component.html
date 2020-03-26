@@ -3,7 +3,7 @@
     <mat-toolbar color="primary">
       <span>Agile Cars</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button>
+      <button mat-icon-button (click)="this.open()">
         <mat-icon color="accent">add_circle</mat-icon>
       </button>
       <button mat-icon-button (click)="this.viewMode = !this.viewMode">
@@ -13,37 +13,12 @@
     </mat-toolbar>
   </div>
   <div fxFlex style="padding: 20px;">
-    <div class="example-container mat-elevation-z8">
-      <table mat-table [dataSource]="this.dataSource">
-        <ng-container matColumnDef="Id">
-          <th mat-header-cell *matHeaderCellDef> Id </th>
-          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Nombre">
-          <th mat-header-cell *matHeaderCellDef> Nombre </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Descripción">
-          <th mat-header-cell *matHeaderCellDef> Descripción </th>
-          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Marca">
-          <th mat-header-cell *matHeaderCellDef> Marca </th>
-          <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Modelo">
-          <th mat-header-cell *matHeaderCellDef> Modelo </th>
-          <td mat-cell *matCellDef="let element"> {{element.model}} </td>
-        </ng-container>
-        <ng-container matColumnDef="Color">
-          <th mat-header-cell *matHeaderCellDef> Color </th>
-          <td mat-cell *matCellDef="let element"> {{element.color}} </td>
-        </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-    </div>
+    <ng-container *ngIf="this.viewMode; else elseTemplate">
+      <app-card-car [dataSource]="this.dataSource.data"></app-card-car>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <app-table-car [dataSource]="this.dataSource"></app-table-car>
+    </ng-template>
   </div>
   <app-loading [displayProgressSpinner]="Loading"></app-loading>
 </div>

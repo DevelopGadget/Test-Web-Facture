@@ -24,10 +24,7 @@ export class CarformComponent implements OnInit {
     }),
     url: new FormControl('', {
       validators: [Validators.required, Validators.pattern(/(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg))/)]
-    }),
-    description: new FormControl('', {
-      validators: [Validators.required]
-    }),
+    })
   });
 
   constructor(public dialogRef: MatDialogRef<CarformComponent>) { }

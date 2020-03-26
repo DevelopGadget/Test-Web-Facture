@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "http://test-facture.getsandbox.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+}
